@@ -9,7 +9,7 @@ const Teachers = () => {
   return (
     <div className="py-5 teacher-area">
       <div className="container">
-        <h5 className="text-center" data-aos="fade-up">Our Professionals</h5>
+        <h5 className="text-center" data-aos="fade-up">OUR PROFESSIONALS</h5>
         <h2 className="mb-5 text-center main-title" data-aos="fade-up">
           Meet Our Professinoal Teachers
         </h2>

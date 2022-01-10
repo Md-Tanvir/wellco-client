@@ -8,7 +8,7 @@ const CountUpArea = () => {
     <div className="container py-5">
       <div className="row gy-5 justify-content-between">
         <div className="col-12 col-lg-4">
-          <h5 data-aos="fade-right">About Us</h5>
+          <h5 data-aos="fade-right">EXPLORE US</h5>
           <h2 data-aos="fade-right" className="main-title">
             The End Result of All True Learning
           </h2>
