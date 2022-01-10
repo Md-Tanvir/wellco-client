@@ -18,9 +18,9 @@ const Footer = () => {
           </div>
           <div className="col-md-6 col-12 col-lg-3">
             <h2>Address</h2>
-            <p><i class="fas fa-location-arrow foot"></i> 374 William S Canning Blvd, River MA 2721, USA</p>
-            <p><i class="fas fa-phone-alt foot"></i> (+880)123-456789</p>
-            <p><i class="fas fa-envelope foot"></i> support@wellco.com</p>
+            <p><i className="fas fa-location-arrow foot"></i> 374 William S Canning Blvd, River MA 2721, USA</p>
+            <p><i className="fas fa-phone-alt foot"></i> (+880)123-456789</p>
+            <p><i className="fas fa-envelope foot"></i> support@wellco.com</p>
           </div>
           <div className="col-md-6 col-12 col-lg-3">
             <h2>Platform</h2>
