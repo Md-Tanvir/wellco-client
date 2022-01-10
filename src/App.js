@@ -1,12 +1,13 @@
 import "./App.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./components/Home/Home";
+
 import Courses from "./components/Courses/Courses";
 import About from "./components/About/About";
 import Error from "./components/Error/Error";
 import Events from "./components/Events/Events";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import Home from "./components/Home/Home/Home";
 
 function App() {
   return (
