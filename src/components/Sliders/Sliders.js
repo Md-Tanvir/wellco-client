@@ -49,7 +49,7 @@ const Sliders = () => {
   };
   return (
     <div className='py-5 container' data-aos="fade-up">
-        <h5 className='text-center'>Partners</h5>
+        <h5 className='text-center'>PARTNERS</h5>
         <h2 className="text-center mb-5 main-title">Trusted by 100 world's best companies</h2>
       <Slider {...settings} >
         <div className="d-flex justify-content-center">

@@ -1,15 +1,18 @@
 .count-body1 {
   background-color: #fbf8cc;
+  border-radius: 15px;
 }
 .count-body2 {
   background-color: #e9fbd5;
+  border-radius: 15px;
 }
 .count-body3 {
   background-color: #dcf1fd;
+  border-radius: 15px;
 }
 .count-body1 h4,
 .count-body2 h4,
 .count-body3 h4 {
-    margin-top: 10px;
+  margin-top: 10px;
   font-weight: 800;
 }
