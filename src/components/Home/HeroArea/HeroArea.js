@@ -5,7 +5,7 @@ import banner from "../../../image/hero-img.png";
 const HeroArea = () => {
   return (
     <div className="hero-area">
-      <div className="container">
+      <div className="container py-5">
         <div className="row align-items-center">
           <div className="col-12 col-md-12 col-lg-6 hero-text ">
             <h1 data-aos="fade-right">People Expect to be Bored eLearning.</h1>
@@ -20,7 +20,7 @@ const HeroArea = () => {
               DISCOVER MORE
             </button>
           </div>
-          <div className="col-12 col-md-12 col-lg-6" data-aos="fade-left">
+          <div className="col-12 d-none d-lg-block col-md-12 col-lg-6 text-center" data-aos="fade-left">
             <img src={banner} className="img-fluid" alt="" />
           </div>
         </div>

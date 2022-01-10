@@ -11,7 +11,7 @@ import Home from "./components/Home/Home/Home";
 
 function App() {
   return (
-    <div>
+    <div className='App'>
       <BrowserRouter>
         <Header></Header>
         <Switch>

@@ -4,14 +4,14 @@
   font-size: 16px;
   font-weight: 900;
   color: #ffffff;
-  background: #21a7d0;
+  background-color: #21a7d0;
   outline: none;
   border: none;
   transition: all 0.5s;
 }
 .hero-btn:hover {
   color: #21a7d0;
-  background: white;
+  background-color: white;
 }
 .hero-btn2 {
   padding: 12px 50px;
@@ -19,19 +19,18 @@
   font-size: 16px;
   font-weight: 900;
   color: #21a7d0;
-  background: white;
+  background-color: white;
   outline: none;
   border: none;
   transition: all 0.5s;
 }
 .hero-btn2:hover {
   color: #ffffff;
-  background: #21a7d0;
+  background-color: #21a7d0;
 }
 .hero-area {
-  padding-top: 40px;
   background-image: url(../../../image/banner.jpg);
-  padding-bottom: 50px;
+
   background-repeat: no-repeat;
 }
 .hero-text h1 {

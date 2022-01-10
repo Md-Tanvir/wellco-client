@@ -1,0 +1,15 @@
+.count-body1 {
+  background-color: #fbf8cc;
+}
+.count-body2 {
+  background-color: #e9fbd5;
+}
+.count-body3 {
+  background-color: #dcf1fd;
+}
+.count-body1 h4,
+.count-body2 h4,
+.count-body3 h4 {
+    margin-top: 10px;
+  font-weight: 800;
+}

@@ -3,11 +3,15 @@ import about from "../../image/about.png";
 import "./About.css";
 import img1 from "../../image/scholarship.png";
 import img2 from "../../image/cap.png";
+import Sliders from "../Home/Sliders/Sliders";
 const About = () => {
   return (
     <div className="container py-5">
       <div className="row gy-5">
-        <div className="col-12 col-md-12 col-lg-6 text-center" data-aos="fade-right">
+        <div
+          className="col-12 col-md-12 col-lg-6 text-center"
+          data-aos="fade-right"
+        >
           <img src={about} className="img-fluid about-img" alt="" />
         </div>
         <div className="col-12 col-md-12 col-lg-6 about-text">
@@ -43,6 +47,8 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      <Sliders></Sliders>
     </div>
   );
 };
