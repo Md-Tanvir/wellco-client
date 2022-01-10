@@ -1,0 +1,44 @@
+.teacher-area {
+  background-color: #f3f8f9;
+}
+.teach-row {
+  display: grid;
+    justify-content: center;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 30px;
+}
+.teach {
+  text-align: center;
+  background-color: white;
+  padding: 20px 20px;
+  border: 1px solid white;
+  transition: all 0.5s;
+}
+.teach:hover {
+  color: #21a7d0;
+  border: 1px solid #21a7d0;
+}
+.teach img {
+  border-radius: 50%;
+  width: 160px;
+  height: 160px;
+}
+.teach h4 {
+  text-align: center;
+  margin-top: 25px;
+}
+
+@media only screen and (min-width: 688px) and (max-width: 992px){
+    .teach-row {
+   
+        grid-template-columns: repeat(3, 1fr);
+
+      }
+}
+@media only screen and (max-width: 687px){
+    .teach-row {
+   
+        grid-template-columns: repeat(1, 1fr);
+
+      }
+}

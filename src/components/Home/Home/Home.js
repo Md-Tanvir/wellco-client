@@ -1,10 +1,9 @@
 import React from "react";
-
 import AboutArea from "../AboutArea/AboutArea";
 import CountUpArea from "../CountUp/CountUpArea";
-
 import HeroArea from "../HeroArea/HeroArea";
-import Sliders from "../Sliders/Sliders";
+import Teachers from "../Teachers/Teachers";
+
 
 const Home = () => {
   return (
@@ -12,9 +11,7 @@ const Home = () => {
       <HeroArea></HeroArea>
       <CountUpArea></CountUpArea>
       <AboutArea></AboutArea>
-      <div className="container">
-        <Sliders></Sliders>
-      </div>
+      <Teachers></Teachers>
     </div>
   );
 };

@@ -1,12 +1,12 @@
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import s1 from "../../../image/brand-1.png";
-import s2 from "../../../image/brand-2.png";
-import s3 from "../../../image/brand-3.png";
-import s4 from "../../../image/brand-4.png";
-import s5 from "../../../image/brand-5.png";
-import s6 from "../../../image/brand-6.png";
+import s1 from "../../image/brand-1.png";
+import s2 from "../../image/brand-2.png";
+import s3 from "../../image/brand-3.png";
+import s4 from "../../image/brand-4.png";
+import s5 from "../../image/brand-5.png";
+import s6 from "../../image/brand-6.png";
 import Slider from "react-slick";
 import './Sliders.css'
 
@@ -48,7 +48,7 @@ const Sliders = () => {
     ],
   };
   return (
-    <div className='py-5' data-aos="fade-up">
+    <div className='py-5 container' data-aos="fade-up">
         <h5 className='text-center'>Partners</h5>
         <h2 className="text-center mb-5 main-title">Trusted by 100 world's best companies</h2>
       <Slider {...settings} >

@@ -3,7 +3,8 @@ import about from "../../image/about.png";
 import "./About.css";
 import img1 from "../../image/scholarship.png";
 import img2 from "../../image/cap.png";
-import Sliders from "../Home/Sliders/Sliders";
+import Sliders from "../Sliders/Sliders";
+
 const About = () => {
   return (
     <div className="container py-5">
