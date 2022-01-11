@@ -34,6 +34,7 @@ const Blogs = () => {
                   alt=""
                 />
                 <div className="card-body">
+                  <h5 className='main-title'><i className="fas fa-user"></i> {blog?.userName}</h5>
                   <h4 className="card-title blog-title">{blog?.title}</h4>
 
                   <div className="my-4">

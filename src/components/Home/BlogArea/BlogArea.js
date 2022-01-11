@@ -30,7 +30,7 @@ const BlogArea = () => {
           </h2>
           <div className=" row row-cols-1 row-cols-md-2 row-cols-lg-3  gx-4 gy-5">
             {blogs?.slice(0, 3).map((blog) => (
-              <div key={blog?.id} className="col">
+              <div key={blog?._id} className="col">
                 <div className="card h-100  blog-card" data-aos="fade-up">
                   <img
                     src={blog?.img}
@@ -38,6 +38,7 @@ const BlogArea = () => {
                     alt=""
                   />
                   <div className="card-body">
+                  <h5 className='main-title'><i className="fas fa-user"></i> {blog?.userName}</h5>
                     <h4 className="card-title blog-title">{blog?.title}</h4>
 
                     <div className="my-4">

@@ -1,30 +1,34 @@
 [
-    {
-        "img": "https://i.ibb.co/sJhS6Xy/b1.jpg",
-        "title": "The Expenses You Are Thinking About",
-        "tag1": "Marketing",
-        "tag2": "Finance",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    {
-        "img": "https://i.ibb.co/ySjBczG/b2.jpg",
-        "title": "While the lovely valley team work",
-        "tag1": "AI",
-        "tag2": "Software",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    {
-        "img": "https://i.ibb.co/xFqKRQj/one.jpg",
-        "title": "University while the lovely valley team work",
-        "tag1": "Web Design",
-        "tag2": "Programming",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    },
-    {
-        "img": "https://i.ibb.co/fx00dLz/b3.jpg",
-        "title": "High school program starting soon 2021",
-        "tag1": "School",
-        "tag2": "University",
-        "text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-    }
+  {
+    "img": "https://i.ibb.co/sJhS6Xy/b1.jpg",
+    "userName": "Admin",
+    "title": "The Expenses You Are Thinking About",
+    "tag1": "Marketing",
+    "tag2": "Finance",
+    "text": "A course description can be defined succinctly as all the relevant details of your course. This is a simplistic description and rather open-ended, but there is a reason for that. There are many types of online courses that target a variety of levels of competence and types of customers/employees. For example, a general interest course on how to knit a jumper will probably not have the same course description format, tone, and writing style as an online degree program from a recognized institution of higher education, but they will have similar types of information. So, it will be helpful to break down the course description into specific areas of content – some of these would be considered ‘mandatory,’ while others can be included or left out as needed.For example, if you’re going to place your course on a course selling platform like iSpring Market to sell it online, you will be asked to add a course topic, course format, an author’s bio, and some other information to ‘build out’ your course description."
+  },
+  {
+    "img": "https://i.ibb.co/ySjBczG/b2.jpg",
+    "userName": "Admin",
+    "title": "While the lovely valley team work",
+    "tag1": "AI",
+    "tag2": "Software",
+    "text": "A course description can be defined succinctly as all the relevant details of your course. This is a simplistic description and rather open-ended, but there is a reason for that. There are many types of online courses that target a variety of levels of competence and types of customers/employees. For example, a general interest course on how to knit a jumper will probably not have the same course description format, tone, and writing style as an online degree program from a recognized institution of higher education, but they will have similar types of information. So, it will be helpful to break down the course description into specific areas of content – some of these would be considered ‘mandatory,’ while others can be included or left out as needed.For example, if you’re going to place your course on a course selling platform like iSpring Market to sell it online, you will be asked to add a course topic, course format, an author’s bio, and some other information to ‘build out’ your course description."
+  },
+  {
+    "img": "https://i.ibb.co/xFqKRQj/one.jpg",
+    "userName": "Admin",
+    "title": "University while the lovely valley team work",
+    "tag1": "Web Design",
+    "tag2": "Programming",
+    "text": "A course description can be defined succinctly as all the relevant details of your course. This is a simplistic description and rather open-ended, but there is a reason for that. There are many types of online courses that target a variety of levels of competence and types of customers/employees. For example, a general interest course on how to knit a jumper will probably not have the same course description format, tone, and writing style as an online degree program from a recognized institution of higher education, but they will have similar types of information. So, it will be helpful to break down the course description into specific areas of content – some of these would be considered ‘mandatory,’ while others can be included or left out as needed.For example, if you’re going to place your course on a course selling platform like iSpring Market to sell it online, you will be asked to add a course topic, course format, an author’s bio, and some other information to ‘build out’ your course description."
+  },
+  {
+    "img": "https://i.ibb.co/fx00dLz/b3.jpg",
+    "title": "High school program starting soon 2021",
+    "userName": "Admin",
+    "tag1": "School",
+    "tag2": "University",
+    "text": "A course description can be defined succinctly as all the relevant details of your course. This is a simplistic description and rather open-ended, but there is a reason for that. There are many types of online courses that target a variety of levels of competence and types of customers/employees. For example, a general interest course on how to knit a jumper will probably not have the same course description format, tone, and writing style as an online degree program from a recognized institution of higher education, but they will have similar types of information. So, it will be helpful to break down the course description into specific areas of content – some of these would be considered ‘mandatory,’ while others can be included or left out as needed.For example, if you’re going to place your course on a course selling platform like iSpring Market to sell it online, you will be asked to add a course topic, course format, an author’s bio, and some other information to ‘build out’ your course description."
+  }
 ]
