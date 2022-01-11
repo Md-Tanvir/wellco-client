@@ -30,6 +30,23 @@ const useFirebase = () => {
       .finally(() => setIsLoading(false));
   };
 
+   // Registering New User
+   const registerUser = (email, password, name, history) => {
+    setIsLoading(true);
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential) => {
+        setAuthError("");
+        const newUser = { email, displayName: name };
+        setUser(newUser);
+
+      })
+      .catch((error) => {
+        setAuthError(error.message);
+        console.log(error);
+      })
+      .finally(() => setIsLoading(false));
+  };
+
 
     return {
         user,
