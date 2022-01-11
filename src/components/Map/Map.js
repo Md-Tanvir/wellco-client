@@ -12,12 +12,13 @@ const containerStyle = {
   };
 
 const Map = () => {
-    // AIzaSyCZQdWZWsNyakL30EbvVherjO4c9HcqFc8
+  
     return (
         <div className='py-5'>
-            <h5 className='text-center'>OUR LOCATION</h5>
-            <h2  className='text-center mb-5 main-title'>Come lets have a talk</h2>
-             <LoadScript
+            <h5 data-aos="fade-up" className='text-center'>OUR LOCATION</h5>
+            <h2 data-aos="fade-up"  className='text-center mb-5 main-title'>Come lets have a talk</h2>
+            <div data-aos="fade-up">
+             <LoadScript 
         googleMapsApiKey={process.env.YOUR_API_KEY}
       >
         <GoogleMap
@@ -29,6 +30,7 @@ const Map = () => {
           <></>
         </GoogleMap>
       </LoadScript>
+      </div>
         </div>
     );
 };
