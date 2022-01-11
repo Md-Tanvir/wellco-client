@@ -15,7 +15,6 @@ import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Blogs from "./components/Blogs/Blogs";
 
-
 function App() {
   return (
     <div className="App">
@@ -39,15 +38,15 @@ function App() {
               <Booking></Booking>
             </PrivateRoute>
             <Route path="/blogs">
-        <Blogs></Blogs>
+              <Blogs></Blogs>
             </Route>
             <Route path="/dashboard">
-             <Dashboard></Dashboard>
+              <Dashboard></Dashboard>
             </Route>
-            <Route path='/login'>
+            <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path='/register'>
+            <Route path="/register">
               <Register></Register>
             </Route>
             <Route path="*">
