@@ -4,7 +4,9 @@ import "./About.css";
 import img1 from "../../image/scholarship.png";
 import img2 from "../../image/cap.png";
 import Sliders from "../Sliders/Sliders";
-import GoogleMap from "../GoogleMap/GoogleMap";
+import Map from "../Map/Map";
+
+
 
 const About = () => {
   return (
@@ -52,7 +54,7 @@ const About = () => {
 
       <Sliders></Sliders>
 
-    <GoogleMap></GoogleMap>
+    <Map></Map>
 
     </div>
   );
