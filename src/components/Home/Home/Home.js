@@ -6,6 +6,7 @@ import Teachers from "../Teachers/Teachers";
 
 
 const Home = () => {
+  
   return (
     <div>
       <HeroArea></HeroArea>

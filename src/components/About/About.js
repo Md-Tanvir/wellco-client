@@ -4,6 +4,7 @@ import "./About.css";
 import img1 from "../../image/scholarship.png";
 import img2 from "../../image/cap.png";
 import Sliders from "../Sliders/Sliders";
+import GoogleMap from "../GoogleMap/GoogleMap";
 
 const About = () => {
   return (
@@ -50,6 +51,9 @@ const About = () => {
       </div>
 
       <Sliders></Sliders>
+
+    <GoogleMap></GoogleMap>
+
     </div>
   );
 };
