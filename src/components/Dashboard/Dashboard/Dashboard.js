@@ -4,6 +4,7 @@ import useAuth from "../../../hooks/useAuth";
 import AddCourse from "../AddCourse/AddCourse";
 import DashboardHome from "../DashboardHome/DashboardHome";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
+import ManageBlogs from "../ManageBlogs/ManageBlogs";
 import ManageCourses from "../ManageCourses/ManageCourses";
 import ManageOrders from "../ManageOrders/ManageOrders";
 import MyOrders from "../MyOrders/MyOrders";
@@ -66,6 +67,9 @@ const Dashboard = () => {
                     <NavLink to={`${url}/makeAdmin`}>
                       <h5>Make Admin</h5>
                     </NavLink>
+                    <NavLink to={`${url}/manageBlogs`}>
+                      <h5>Manage Blogs</h5>
+                    </NavLink>
                   </>
                   {/* )} */}
 
@@ -75,7 +79,7 @@ const Dashboard = () => {
                       <h5>My Orders</h5>
                     </NavLink>
                     <NavLink to={`${url}/review`}>
-                      <h5>Give Review</h5>
+                      <h5>Give Feedback</h5>
                     </NavLink>
                   </>
                   {/* )} */}
@@ -111,6 +115,9 @@ const Dashboard = () => {
               </Route>
               <Route path={`${path}/manageOrders`}>
                 <ManageOrders></ManageOrders>
+              </Route>
+              <Route path={`${path}/manageBlogs`}>
+              <ManageBlogs></ManageBlogs>
               </Route>
               <Route path={`${path}/publishBlog`}>
                 <PublishBlog></PublishBlog>

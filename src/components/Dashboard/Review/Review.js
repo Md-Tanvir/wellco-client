@@ -22,7 +22,7 @@ const Review = () => {
       .then((res) => res.json())
       .then((result) => {
         if (result.insertedId) {
-          alert("Successfully Added Review");
+          alert("Feedback Given Successfully");
 
           reset();
         }

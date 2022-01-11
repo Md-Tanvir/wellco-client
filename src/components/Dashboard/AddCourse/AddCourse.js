@@ -64,17 +64,17 @@ const AddCourse = () => {
             className="service-input"
           />
           <input
-            {...register("description")}
-            placeholder="Course Description"
-            className="service-input"
-          />
-          <br />
-
-          <input
             {...register("price", { required: true })}
             placeholder="Course Price"
             type="number"
             className="service-input"
+          />
+          <br />
+          <textarea
+            className="service-input service-text"
+            placeholder="Course Description"
+            {...register("description")}
+            required
           />
           <br />
 

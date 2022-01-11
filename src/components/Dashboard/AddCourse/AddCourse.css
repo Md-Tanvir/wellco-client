@@ -5,7 +5,7 @@
     margin-bottom: 15px;
     border-radius: 4px;
     outline: none;
-    border: 3px solid black;
+  
 }
 .login-form{
     text-align: center;
@@ -20,4 +20,9 @@
     color: white;
     background-color: #273C66;
 
+}
+.service-text{
+    border:none ;
+    border-bottom: 1px solid #cacaca;
+    border-radius: 0;
 }
