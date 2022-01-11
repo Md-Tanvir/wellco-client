@@ -12,7 +12,7 @@ const Blogs = () => {
   const blogs = useSelector((state) => state.blogs.allBlogs);
   const status = useSelector((state) => state.blogs.status);
   return (
-    <div className="blog-area">
+    <div className="blog-area py-5">
       {/* spinner */}
       {status === "pending" ? (
         <div className="d-flex justify-content-center my-5 pb-5">
@@ -22,7 +22,7 @@ const Blogs = () => {
         </div>
       ) :
       <>
-      <div className="container py-5">
+      <div className="container ">
         <h1 className="text-center main-title mb-5">Check Our Latest Blogs</h1>
         <div className=" row row-cols-1 row-cols-md-2 row-cols-lg-3  gx-4 gy-5">
           {blogs.map((blog) => (

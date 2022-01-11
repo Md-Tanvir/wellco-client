@@ -15,7 +15,7 @@ const Courses = () => {
   const status = useSelector((state) => state.courses.status);
 
   return (
-    <div className="course-area">
+    <div className="course-area py-5 ">
     {/* spinner */}
     {status === "pending" ? (
         <div className="d-flex justify-content-center my-5 pb-5">
@@ -25,7 +25,7 @@ const Courses = () => {
         </div>
     )
      :<>
-     <div className="container py-5 ">
+     <div className="container ">
         <h1 className="text-center mb-5 main-title" data-aos="fade-up">
           Explore Popular Courses
         </h1>
