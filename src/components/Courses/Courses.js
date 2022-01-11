@@ -12,16 +12,15 @@ const Courses = () => {
       .then((data) => setCourses(data));
   }, []);
   return (
-    <div className='course-area'>
+    <div className="course-area">
       <div className="container py-5 ">
-      <h1 className="text-center mb-5 main-title"  data-aos="fade-up">Explore Popular Courses</h1>
-        <div
-         
-          className=" row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5"
-        >
+        <h1 className="text-center mb-5 main-title" data-aos="fade-up">
+          Explore Popular Courses
+        </h1>
+        <div className=" row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
           {courses.map((course) => (
             <div key={course?.id} className="col">
-              <div className="card h-100  course-card"  data-aos="fade-up">
+              <div className="card h-100  course-card" data-aos="fade-up">
                 <img
                   src={course?.img}
                   className="card-img-top course-img"
@@ -42,7 +41,6 @@ const Courses = () => {
                       />
                     </div>
                     <div>
-    
                       <h5 className="mb-0 ins-name">
                         {course?.instructorName}
                       </h5>
@@ -53,12 +51,15 @@ const Courses = () => {
                   <div className="row d-flex justify-content-between  align-items-center">
                     <div className="col-6">
                       <h6 className="mb-0">
-                        <i className="fas fa-book me-1"></i> {course?.lessons} Lessons
+                        <i className="fas fa-book me-1"></i> {course?.lessons}{" "}
+                        Lessons
                       </h6>
                     </div>
                     <div className="col-6 text-end">
                       <Link to={`/booking/${course?._id}`}>
-                        <button className="btn course-btn">Know Details <i className="fas fa-arrow-right"></i></button>
+                        <button className="btn course-btn">
+                          Know Details <i className="fas fa-arrow-right"></i>
+                        </button>
                       </Link>
                     </div>
                   </div>

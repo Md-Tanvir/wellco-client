@@ -1,5 +1,6 @@
 import React from "react";
 import AboutArea from "../AboutArea/AboutArea";
+import BlogArea from "../BlogArea/BlogArea";
 import CountUpArea from "../CountUp/CountUpArea";
 import CourseArea from "../CourseArea/CourseArea";
 import HeroArea from "../HeroArea/HeroArea";
@@ -15,6 +16,7 @@ const Home = () => {
       <CountUpArea></CountUpArea>
       <CourseArea></CourseArea>
       <AboutArea></AboutArea>
+      <BlogArea></BlogArea>
       <Teachers></Teachers>
       <Reviews></Reviews>
     </div>

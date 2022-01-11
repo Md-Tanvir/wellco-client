@@ -28,8 +28,8 @@ const Header = () => {
                   <NavLink to="/courses">
                     <li>Courses</li>
                   </NavLink>
-                  <NavLink to="/events">
-                    <li>Events</li>
+                  <NavLink to="/blogs">
+                    <li>Blogs</li>
                   </NavLink>
                   <NavLink to="/about">
                     <li>About</li>
@@ -88,26 +88,47 @@ const Header = () => {
                 </div>
                 <div className="offcanvas-body pt-0">
                   <ul className="navbar-nav justify-content-end flex-grow-1">
-                    <NavLink to="/home">
-                      <li>Home</li>
-                    </NavLink>
-                    <NavLink to="/courses">
-                      <li>Course</li>
-                    </NavLink>
-                    <NavLink to="/events">
-                      <li>Events</li>
-                    </NavLink>
-                    <NavLink to="/about">
-                      <li>About</li>
-                    </NavLink>
+                  <>
+                      <NavLink to="/home">
+                        <li>Home</li>
+                      </NavLink>
+                      <NavLink to="/courses">
+                        <li>Course</li>
+                      </NavLink>
+                      <NavLink to="/blogs">
+                        <li>Blogs</li>
+                      </NavLink>
+                      <NavLink to="/about">
+                        <li>About</li>
+                      </NavLink>
+                    
 
-                    <NavLink to="/dashboard">
-                      <li>Dashboard</li>
-                    </NavLink>
+                      {user?.email && (
+                        <NavLink to="/dashboard">
+                          <li>Dashboard</li>
+                        </NavLink>
+                      )}
+                      {user?.email && (
+                        <span>{user.displayName || user.email}</span>
+                      )}
 
-                    <NavLink to="/login">
-                      <li>Login</li>
-                    </NavLink>
+                      {user?.email ? (
+                        <span
+                          style={{
+                            marginLeft: "15px",
+                            fontSize: "20px",
+                            cursor: "pointer",
+                          }}
+                          onClick={logout}
+                        >
+                          <i className="fas fa-sign-out-alt"></i>
+                        </span>
+                      ) : (
+                        <NavLink to="/login">
+                          <li>Login</li>
+                        </NavLink>
+                      )}
+                    </>
                   </ul>
                 </div>
               </div>

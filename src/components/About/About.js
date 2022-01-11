@@ -10,6 +10,7 @@ import Map from "../Map/Map";
 
 const About = () => {
   return (
+    <div className='about-area'>
     <div className="container py-5">
       <div className="row gy-5">
         <div
@@ -56,6 +57,7 @@ const About = () => {
 
     <Map></Map>
 
+    </div>
     </div>
   );
 };

@@ -1,0 +1,17 @@
+.blog-tag{
+    padding: 8px 15px;
+    background-color:  #21a7d0;
+    border-radius: 10px;
+    color: white;
+}
+.blog-title{
+    font-weight: 800;
+}
+.blog-card{
+    box-shadow: 0 10px 30px rgb(75 131 252 / 10%);
+    border: none;
+    border-radius: 10px;
+}
+.blog-area{
+    background-color: #F3F4F8;
+}

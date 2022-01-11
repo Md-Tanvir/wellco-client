@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Courses from "./components/Courses/Courses";
 import About from "./components/About/About";
 import Error from "./components/Error/Error";
-import Events from "./components/Events/Events";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home/Home";
@@ -14,6 +13,8 @@ import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
+import Blogs from "./components/Blogs/Blogs";
+
 
 function App() {
   return (
@@ -37,8 +38,8 @@ function App() {
             <PrivateRoute path="/booking/:courseId">
               <Booking></Booking>
             </PrivateRoute>
-            <Route path="/events">
-              <Events></Events>
+            <Route path="/blogs">
+        <Blogs></Blogs>
             </Route>
             <Route path="/dashboard">
              <Dashboard></Dashboard>
