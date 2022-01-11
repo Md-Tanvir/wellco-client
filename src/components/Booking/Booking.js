@@ -18,7 +18,9 @@ const Booking = () => {
       });
   }, [courseId]);
 
-  return <div></div>;
+  return (<div>
+      
+  </div>);
 };
 
 export default Booking;
