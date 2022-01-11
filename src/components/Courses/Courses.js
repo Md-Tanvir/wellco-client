@@ -1,25 +1,37 @@
 import React from "react";
 import { useEffect } from "react";
-import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { fetchCourses } from "../../Redux/slices/courseSlice";
 import "./Courses.css";
 
 const Courses = () => {
-  const [courses, setCourses] = useState([]);
+ const dispatch = useDispatch()
   useEffect(() => {
-    fetch("./course.json")
-      .then((res) => res.json())
-      .then((data) => setCourses(data));
+    dispatch(fetchCourses());
   }, []);
+
+  const courses = useSelector((state) => state.courses.allCourses);
+  const status = useSelector((state) => state.courses.status);
+
   return (
     <div className="course-area">
-      <div className="container py-5 ">
+    {/* spinner */}
+    {status === "pending" ? (
+        <div className="d-flex justify-content-center my-5 pb-5">
+          <div className="spinner-grow" role="status">
+            <span className="visually-hidden">Loading...</span>
+          </div>
+        </div>
+    )
+     :<>
+     <div className="container py-5 ">
         <h1 className="text-center mb-5 main-title" data-aos="fade-up">
           Explore Popular Courses
         </h1>
         <div className=" row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-4 gy-5">
           {courses.map((course) => (
-            <div key={course?.id} className="col">
+            <div key={course?._id} className="col">
               <div className="card h-100  course-card" data-aos="fade-up">
                 <img
                   src={course?.img}
@@ -69,6 +81,7 @@ const Courses = () => {
           ))}
         </div>
       </div>
+     </>}
     </div>
   );
 };

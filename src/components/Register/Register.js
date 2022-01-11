@@ -1,36 +1,35 @@
-import React, { useState } from 'react';
-import { Link, useHistory, useLocation } from 'react-router-dom';
-import useAuth from '../../hooks/useAuth';
+import React, { useState } from "react";
+import { Link, useHistory, useLocation } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
-    const [loginData, setLoginData] = useState({});
-    const { user, registerUser, isLoading, authError, signInWithGoogle } =
-      useAuth();
-  
-    const location = useLocation();
-    const history = useHistory();
-  
-    const handleOnChange = (e) => {
-      const field = e.target.name;
-      const value = e.target.value;
-      const newLoginData = { ...loginData };
-      newLoginData[field] = value;
-      setLoginData(newLoginData);
-    };
-    const handleLoginSubmit = (e) => {
-      registerUser(loginData.email, loginData.password, loginData.name, history);
-      e.preventDefault();
-    };
-    const handleGoogleSignIn = () => {
-      signInWithGoogle(location, history);
-    };
-    return (
-        <div className='login-area py-5'>
-            
-            <div className="container">
+  const [loginData, setLoginData] = useState({});
+  const { user, registerUser, isLoading, authError, signInWithGoogle } =
+    useAuth();
+
+  const location = useLocation();
+  const history = useHistory();
+
+  const handleOnChange = (e) => {
+    const field = e.target.name;
+    const value = e.target.value;
+    const newLoginData = { ...loginData };
+    newLoginData[field] = value;
+    setLoginData(newLoginData);
+  };
+  const handleLoginSubmit = (e) => {
+    registerUser(loginData.email, loginData.password, loginData.name, history);
+    e.preventDefault();
+  };
+  const handleGoogleSignIn = () => {
+    signInWithGoogle(location, history);
+  };
+  return (
+    <div className="login-area py-5">
+      <div className="container">
         <div data-aos="fade-up">
           <form className="login-form" onSubmit={handleLoginSubmit}>
-            <h2 className='text-center'>REGISTER</h2>
+            <h2 className="text-center">REGISTER</h2>
             <input
               placeholder="Enter your name"
               className="form-control mb-4"
@@ -60,13 +59,19 @@ const Register = () => {
               Register
             </button>
             <div className="mx-auto" style={{ maxWidth: "350px" }}>
-              {isLoading &&  <div className="d-flex justify-content-center">
-                  <div className="spinner-border" role="status">
+              {isLoading && (
+                <div className="d-flex justify-content-center">
+                  <div className="spinner-grow" role="status">
                     <span className="visually-hidden">Loading...</span>
                   </div>
-                </div>}
-              {user?.email && <p className='mt-2'>User Created successfully!</p>}
-              {authError && <p className='mb-0 text-danger mt-2'>{authError}</p>}
+                </div>
+              )}
+              {user?.email && (
+                <p className="mt-2">User Created successfully!</p>
+              )}
+              {authError && (
+                <p className="mb-0 text-danger mt-2">{authError}</p>
+              )}
             </div>
           </form>
 
@@ -83,9 +88,8 @@ const Register = () => {
           </div>
         </div>
       </div>
-
-        </div>
-    );
+    </div>
+  );
 };
 
 export default Register;
