@@ -1,0 +1,31 @@
+.dash-nav h5{
+    color: white;
+    text-align: center;
+    padding: 13px 5px;
+    border-bottom: 2px solid white;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+.dash-nav h5:hover{
+    background-color: white ;
+    color: #21a7d0;
+}
+.btn-dash{
+    background-color: #273C66;
+    color: white;
+}
+.btn-dash:hover{
+    background-color: #273C66;
+    color: white;
+}
+.main-canvas{
+    background-color: #273C66;
+}
+@media screen and (max-width: 475px) {
+    .main-canvas{
+        width: 60%;
+    }
+    .dash-nav h5{
+        font-size: 16px;
+    }
+  }
