@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, Route, Switch, useRouteMatch } from "react-router-dom";
+import AdminRoute from "../../../AdminRoute/AdminRoute";
 import useAuth from "../../../hooks/useAuth";
 import AddCourse from "../AddCourse/AddCourse";
 import DashboardHome from "../DashboardHome/DashboardHome";
@@ -51,42 +52,42 @@ const Dashboard = () => {
               </div>
               <div className="offcanvas-body">
                 <div className="dash-nav">
-                  {/* {admin && ( */}
-                  <>
-                    <NavLink to={`${url}/manageAllOrders`}>
-                      <h5>Manage All Orders</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/publishBlog`}>
-                      <h5>Publish Blog</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/manageCourses`}>
-                      <h5>Manage Courses</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/addCourse`}>
-                      <h5>Add Course</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/makeAdmin`}>
-                      <h5>Make Admin</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/manageBlogs`}>
-                      <h5>Manage Blogs</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/manageReviews`}>
-                      <h5>Manage Reviews</h5>
-                    </NavLink>
-                  </>
-                  {/* )} */}
+                  {admin && (
+                    <>
+                      <NavLink to={`${url}/manageOrders`}>
+                        <h5>Manage All Orders</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/manageBlogs`}>
+                        <h5>Manage Blogs</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/manageReviews`}>
+                        <h5>Manage Reviews</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/manageCourses`}>
+                        <h5>Manage Courses</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/addCourse`}>
+                        <h5>Add Course</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/makeAdmin`}>
+                        <h5>Make Admin</h5>
+                      </NavLink>
+                    </>
+                  )}
 
-                  {/* {!admin && ( */}
-                  <>
-                    <NavLink to={`${url}/myOrder`}>
-                      <h5>My Orders</h5>
-                    </NavLink>
-                    <NavLink to={`${url}/review`}>
-                      <h5>Give Feedback</h5>
-                    </NavLink>
-                  </>
-                  {/* )} */}
+                  {!admin && (
+                    <>
+                      <NavLink to={`${url}/myOrder`}>
+                        <h5>My Orders</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/review`}>
+                        <h5>Give Feedback</h5>
+                      </NavLink>
+                      <NavLink to={`${url}/publishBlog`}>
+                        <h5>Publish Blog</h5>
+                      </NavLink>
+                    </>
+                  )}
                   <div className="text-center">
                     <button onClick={logout} className="btn btn-danger mt-3">
                       Log Out
@@ -102,30 +103,30 @@ const Dashboard = () => {
                 <DashboardHome></DashboardHome>
               </Route>
 
-              <Route path={`${path}/makeAdmin`}>
+              <AdminRoute path={`${path}/makeAdmin`}>
                 <MakeAdmin></MakeAdmin>
-              </Route>
-              <Route path={`${path}/manageCourses`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/manageCourses`}>
                 <ManageCourses></ManageCourses>
-              </Route>
-              <Route path={`${path}/addCourse`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/addCourse`}>
                 <AddCourse></AddCourse>
-              </Route>
+              </AdminRoute>
               <Route path={`${path}/review`}>
                 <Review></Review>
               </Route>
               <Route path={`${path}/myOrder`}>
                 <MyOrders></MyOrders>
               </Route>
-              <Route path={`${path}/manageOrders`}>
+              <AdminRoute path={`${path}/manageOrders`}>
                 <ManageOrders></ManageOrders>
-              </Route>
-              <Route path={`${path}/manageBlogs`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/manageBlogs`}>
                 <ManageBlogs></ManageBlogs>
-              </Route>
-              <Route path={`${path}/manageReviews`}>
+              </AdminRoute>
+              <AdminRoute path={`${path}/manageReviews`}>
                 <ManageReviews></ManageReviews>
-              </Route>
+              </AdminRoute>
               <Route path={`${path}/publishBlog`}>
                 <PublishBlog></PublishBlog>
               </Route>

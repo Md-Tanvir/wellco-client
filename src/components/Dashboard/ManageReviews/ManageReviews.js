@@ -29,7 +29,7 @@ const ManageReviews = () => {
     };
     return (
         <div>
-      <h2 className="text-center mb-5">All The reviews</h2>
+      <h2 className="text-center mb-5">All The Reviews</h2>
 
       <table className="table">
         <thead>
