@@ -29,7 +29,7 @@ const MakeAdmin = () => {
   };
   return (
     <div>
-      <h2 className="text-center mb-5">Make New Admin Here</h2>
+      <h2 className="text-center mb-5">Add New Admin</h2>
       {/* form to create admin */}
       <form
         className="justify-content-center mx-auto text-center"
@@ -43,7 +43,7 @@ const MakeAdmin = () => {
           placeholder="Enter The Email"
           className="form-control mx-auto my-3"
         />
-        <button type="submit" className="btn btn-dark">
+        <button type="submit" className="btn-submit ">
           Make Admin
         </button>
       </form>

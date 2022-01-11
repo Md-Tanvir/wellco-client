@@ -13,5 +13,11 @@
 .btn-submit{
     padding: 8px 40px;
     background-color: black;
+    color: white;border: none;
+    transition: all .5s;
+}
+.btn-submit:hover{
     color: white;
+    background-color: #273C66;
+
 }

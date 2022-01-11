@@ -80,7 +80,7 @@ const AddCourse = () => {
 
           {errors.exampleRequired && <span>This field is required</span>}
 
-          <input type="submit" value="Add Course" className="btn btn-submit" />
+          <input type="submit" value="Add Course" className=" btn-submit" />
         </form>
       </div>
     </div>
