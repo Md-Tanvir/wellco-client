@@ -5,11 +5,10 @@ import logo from "../../image/logo.png";
 import "./Header.css";
 
 const Header = () => {
-
   const { logout, user } = useAuth();
 
   return (
-    <div>
+    <div className="main-menu">
       <div className="menubar ">
         <div className="container">
           <div className="main-header">
@@ -39,7 +38,11 @@ const Header = () => {
                       <li>Dashboard</li>
                     </NavLink>
                   )}
-                  {user?.email && <span className='text-light'>{user.displayName || user.email}</span>}
+                  {user?.email && (
+                    <span className="text-light pe-3">
+                      {user.displayName || user.email}
+                    </span>
+                  )}
 
                   {user?.email ? (
                     <span
@@ -47,7 +50,7 @@ const Header = () => {
                         marginLeft: "15px",
                         fontSize: "20px",
                         cursor: "pointer",
-                        color:'white'
+                        color: "white",
                       }}
                       onClick={logout}
                     >
@@ -69,7 +72,7 @@ const Header = () => {
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
               >
-              <i className="fas fa-align-right"></i>
+                <i className="fas fa-align-right"></i>
               </button>
               <div
                 className="offcanvas offcanvas-end w-50 text-dark "
@@ -88,7 +91,7 @@ const Header = () => {
                 </div>
                 <div className="offcanvas-body pt-0">
                   <ul className="navbar-nav justify-content-end flex-grow-1">
-                  <>
+                    <>
                       <NavLink to="/home">
                         <li>Home</li>
                       </NavLink>
@@ -101,7 +104,6 @@ const Header = () => {
                       <NavLink to="/about">
                         <li>About</li>
                       </NavLink>
-                    
 
                       {user?.email && (
                         <NavLink to="/dashboard">
@@ -109,13 +111,21 @@ const Header = () => {
                         </NavLink>
                       )}
                       {user?.email && (
-                        <span>{user.displayName || user.email}</span>
+                        <span
+                          style={{
+                            marginLeft: "10px",
+                            marginBottom: "10px",
+                            fontWeight: 900,
+                          }}
+                        >
+                          {user.displayName || user.email}
+                        </span>
                       )}
 
                       {user?.email ? (
                         <span
                           style={{
-                            marginLeft: "15px",
+                            marginLeft: "10px",
                             fontSize: "20px",
                             cursor: "pointer",
                           }}

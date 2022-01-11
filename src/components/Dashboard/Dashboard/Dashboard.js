@@ -29,8 +29,8 @@ const Dashboard = () => {
             aria-labelledby="offcanvasExampleLabel"
           >
             <div className="offcanvas-header">
-              <h5 className="offcanvas-title text-white" id="offcanvasExampleLabel">
-                Your Dashboard
+              <h5 className="offcanvas-title" id="offcanvasExampleLabel">
+               Dashboard
               </h5>
               <button
                 type="button"
@@ -77,6 +77,7 @@ const Dashboard = () => {
             </div>
           </div>
         </div>
+
       </div>
     </div>
   );
