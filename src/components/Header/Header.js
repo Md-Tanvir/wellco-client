@@ -1,9 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
+import useAuth from "../../hooks/useAuth";
 import logo from "../../image/logo.png";
 import "./Header.css";
 
 const Header = () => {
+
+  const { logout, user } = useAuth();
+
   return (
     <div>
       <div className="menubar ">
@@ -30,12 +34,30 @@ const Header = () => {
                   <NavLink to="/about">
                     <li>About</li>
                   </NavLink>
-                  <NavLink to="/login">
-                    <li>Login</li>
-                  </NavLink>
-                  <NavLink to="/dashboard">
-                    <li>Dashboard</li>
-                  </NavLink>
+                  {user?.email && (
+                    <NavLink to="/dashboard">
+                      <li>Dashboard</li>
+                    </NavLink>
+                  )}
+                  {user?.email && <span className='text-light'>{user.displayName || user.email}</span>}
+
+                  {user?.email ? (
+                    <span
+                      style={{
+                        marginLeft: "15px",
+                        fontSize: "20px",
+                        cursor: "pointer",
+                        color:'white'
+                      }}
+                      onClick={logout}
+                    >
+                      <i className="fas fa-sign-out-alt"></i>
+                    </span>
+                  ) : (
+                    <NavLink to="/login">
+                      <li>Login</li>
+                    </NavLink>
+                  )}
                 </ul>
               </nav>
 
