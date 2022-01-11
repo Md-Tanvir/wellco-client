@@ -1,0 +1,6 @@
+.review-body{
+    box-shadow: 0 10px 30px rgb(75 131 252 / 10%);
+}
+.review-body p {
+    text-align: justify;
+}

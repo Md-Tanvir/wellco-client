@@ -14,6 +14,7 @@
   border: 1px solid white;
   transition: all 0.5s;
   border-radius: 15px;
+  box-shadow: 0 10px 30px rgb(75 131 252 / 10%);
 }
 .teach:hover {
   color: #21a7d0;

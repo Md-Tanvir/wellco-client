@@ -16,7 +16,7 @@ const Map = () => {
     return (
         <div className='py-5'>
             <h5 data-aos="fade-up" className='text-center'>OUR LOCATION</h5>
-            <h2 data-aos="fade-up"  className='text-center mb-5 main-title'>Come lets have a talk</h2>
+            <h2 data-aos="fade-up"  className='text-center mb-5 main-title'>Come Let's Have a Talk</h2>
             <div data-aos="fade-up">
              <LoadScript 
         googleMapsApiKey={process.env.YOUR_API_KEY}

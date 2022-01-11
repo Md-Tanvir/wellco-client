@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Rating from 'react-rating';
 import Slider from "react-slick";
-
+import './Reviews.css'
 const Reviews = () => {
 
     const [reviews,Setreviews]= useState([])
@@ -53,8 +53,9 @@ const Reviews = () => {
         <h2 data-aos="fade-up" className='text-center main-title mb-5'>What Our Students Says</h2>
         <Slider {...settings}>
         {reviews.map((review) => (
-          <div key={review?.id} data-aos="fade-up" className="p-4  review-body">
-              <h5 className="text-center">
+          <div key={review?.id} data-aos="fade-up" className="p-4 ">
+             <div className='review-body p-4'>
+             <h5 className="text-center">
               <Rating
                 className="rating text-warning"
                 emptySymbol="far fa-star  text-warning"
@@ -65,7 +66,8 @@ const Reviews = () => {
             </h5>
            
             <p>{review?.text}</p>
-            <h4 className="text-center">{review?.name}</h4>
+            <h4 className="text-center">- {review?.name}</h4>
+             </div>
           </div>
         ))}
 
