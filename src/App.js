@@ -12,6 +12,8 @@ import Booking from "./components/Booking/Booking";
 import AuthProvider from "./Context/AuthProvider";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
+import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
+import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -26,17 +28,20 @@ function App() {
             <Route path="/home">
               <Home></Home>
             </Route>
-            <Route path="/courses">
+            <PrivateRoute path="/courses">
               <Courses></Courses>
-            </Route>
+            </PrivateRoute>
             <Route path="/about">
               <About></About>
             </Route>
-            <Route path="/booking/:courseId">
+            <PrivateRoute path="/booking/:courseId">
               <Booking></Booking>
-            </Route>
+            </PrivateRoute>
             <Route path="/events">
               <Events></Events>
+            </Route>
+            <Route path="/dashboard">
+             <Dashboard></Dashboard>
             </Route>
             <Route path='/login'>
               <Login></Login>
