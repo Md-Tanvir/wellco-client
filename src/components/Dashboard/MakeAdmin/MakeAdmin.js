@@ -9,7 +9,7 @@ const MakeAdmin = () => {
   //  getting admin role
   const handleAdmin = (e) => {
     const user = { email };
-    fetch("https://blooming-springs-47114.herokuapp.com/users/admin", {
+    fetch("http://localhost:5000/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
