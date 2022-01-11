@@ -8,6 +8,7 @@ import Events from "./components/Events/Events";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home/Home";
+import Booking from "./components/Booking/Booking";
 
 function App() {
   return (
@@ -27,7 +28,9 @@ function App() {
           <Route path="/about">
             <About></About>
           </Route>
-
+          <Route path="/booking/:courseId">
+              <Booking></Booking>
+            </Route>
           <Route path="/events">
             <Events></Events>
           </Route>
