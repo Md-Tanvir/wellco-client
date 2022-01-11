@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const ManageCourses = () => {
-  const [courses, setCourses] = useState(null);
+  const [courses, setCourses] = useState([]);
 
   // Getting all Courses
   useEffect(() => {
@@ -31,41 +31,38 @@ const ManageCourses = () => {
   return (
     <div>
       <h2 className="text-center mb-5">All The Courses</h2>
-      {/* spinner */}
-      {!courses && (
-        <div className="d-flex justify-content-center">
-          <div className="spinner-grow my-5" role="status">
-            <span className="visually-hidden">Loading...</span>
-          </div>
-        </div>
-      )}
-      <div className="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-5">
-        {courses?.map((course) => (
-          <div key={course._id} className="col">
-            <div className="card h-100">
-              <img
-                src={course?.img}
-                style={{ height: "200px", objectFit: "cover" }}
-                className="card-img-top"
-                alt="..."
-              />
-              <div className="card-body">
-                <h5 className="card-title">{course?.title}</h5>
-                <h5>$ {course?.price}</h5>
 
+      <table className="table">
+        <thead>
+          <tr>
+            <th scope="col">Course Name</th>
+            <th scope="col">Instructor Name</th>
+            <th scope="col">Price</th>
+            <th scope="col">Handle</th>
+          </tr>
+        </thead>
+        <tbody>
+          {courses.map((course) => (
+            <tr key={course._id}>
+              <th>{course.title}</th>
+              <td>{course?.instructorName}</td>
+              <td>$ {course?.price}</td>
+              <td>
                 <button
                   onClick={() => handleDelete(course?._id)}
-                  className="btn btn-danger mb-0 float-end"
+                  className="btn btn-danger"
                 >
-                  <i className="fa-regular fa-trash-can"></i> Delete Course
+                  <i className="fa-regular fa-trash-can"></i> Delete
                 </button>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
 
 export default ManageCourses;
+
+
