@@ -13,16 +13,27 @@
 .btn-dash{
     background-color: #273C66;
     color: white;
+    box-shadow: 0 10px 30px rgb(75 131 252 / 10%);
 }
 .btn-dash:hover{
     background-color:#355492;
     color: white;
 }
 .main-canvas{
-    background-color: white;
+    background-color: #F3F4F8;
 }
 .offcanvas-title{
     font-weight: 900;
+}
+.dash-header{
+    background-color:#273C66;
+    color: white;
+}
+.text-wlc{
+    color: #21a7d0;
+}
+.main-dashboard{
+    background-color: #F3F4F8;
 }
 @media screen and (max-width: 475px) {
     .main-canvas{
