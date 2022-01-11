@@ -7,6 +7,7 @@ import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageBlogs from "../ManageBlogs/ManageBlogs";
 import ManageCourses from "../ManageCourses/ManageCourses";
 import ManageOrders from "../ManageOrders/ManageOrders";
+import ManageReviews from "../ManageReviews/ManageReviews";
 import MyOrders from "../MyOrders/MyOrders";
 import PublishBlog from "../PublishBlog/PublishBlog";
 import Review from "../Review/Review";
@@ -17,7 +18,7 @@ const Dashboard = () => {
   const { admin, logout } = useAuth();
 
   return (
-    <div className='main-dashboard'>
+    <div className="main-dashboard">
       <div className="container">
         <div className="row py-5">
           <div>
@@ -70,6 +71,9 @@ const Dashboard = () => {
                     <NavLink to={`${url}/manageBlogs`}>
                       <h5>Manage Blogs</h5>
                     </NavLink>
+                    <NavLink to={`${url}/manageReviews`}>
+                      <h5>Manage Reviews</h5>
+                    </NavLink>
                   </>
                   {/* )} */}
 
@@ -117,7 +121,10 @@ const Dashboard = () => {
                 <ManageOrders></ManageOrders>
               </Route>
               <Route path={`${path}/manageBlogs`}>
-              <ManageBlogs></ManageBlogs>
+                <ManageBlogs></ManageBlogs>
+              </Route>
+              <Route path={`${path}/manageReviews`}>
+                <ManageReviews></ManageReviews>
               </Route>
               <Route path={`${path}/publishBlog`}>
                 <PublishBlog></PublishBlog>

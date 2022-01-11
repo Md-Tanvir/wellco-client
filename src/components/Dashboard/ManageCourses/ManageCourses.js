@@ -12,7 +12,7 @@ const ManageCourses = () => {
 
   // Deleting course with id
   const handleDelete = (id) => {
-    const action = window.confirm("Do you want to delete the product?");
+    const action = window.confirm("Do you want to delete the course?");
     if (action) {
       fetch(`http://localhost:5000/deleteCourse/${id}`, {
         method: "DELETE",
