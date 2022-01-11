@@ -47,7 +47,7 @@ const Header = () => {
                 data-bs-target="#offcanvasRight"
                 aria-controls="offcanvasRight"
               >
-                <i className="fas fa-bars"></i>
+              <i className="fas fa-align-right"></i>
               </button>
               <div
                 className="offcanvas offcanvas-end w-50 text-dark "
