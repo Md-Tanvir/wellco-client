@@ -54,6 +54,9 @@ const Dashboard = () => {
                 <div className="dash-nav">
                   {admin && (
                     <>
+                    <NavLink to={`${url}/publishBlog`}>
+                        <h5>Publish Blog</h5>
+                      </NavLink>
                       <NavLink to={`${url}/manageOrders`}>
                         <h5>Manage All Orders</h5>
                       </NavLink>
