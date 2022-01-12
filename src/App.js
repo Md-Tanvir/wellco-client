@@ -14,6 +14,7 @@ import Register from "./components/Register/Register";
 import PrivateRoute from "./components/PrivateRoute/PrivateRoute";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Blogs from "./components/Blogs/Blogs";
+import Blog from "./components/Blog/Blog";
 
 function App() {
   return (
@@ -39,6 +40,9 @@ function App() {
             </PrivateRoute>
             <Route path="/blogs">
               <Blogs></Blogs>
+            </Route>
+            <Route path="/blog/:blogId">
+             <Blog></Blog>
             </Route>
             <Route path="/dashboard">
               <Dashboard></Dashboard>

@@ -14,6 +14,13 @@
     border-radius: 5px;
     font-weight: 800;
 }
+.booking-price{
+    background-color: #21a7d0;
+    color: white;
+    padding: 9px 15px;
+    border-radius: 5px;
+    font-weight: 800;
+}
 .course-title{
     font-weight: 800;
 }
