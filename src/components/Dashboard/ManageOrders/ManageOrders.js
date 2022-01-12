@@ -25,7 +25,7 @@ const ManageOrders = () => {
             alert("Canceled successfully");
             const remaining = allOrders.filter((order) => order._id !== id);
             setAllOrders(remaining);
-          }
+          }  
         });
     }
   };
@@ -41,13 +41,14 @@ const ManageOrders = () => {
         if (data.modifiedCount) {
           alert("Order Shipped");
           setIsApproved(true);
+          setIsApproved(false);
         }
       });
   };
 
   return (
     <div>
-      <h2 className="text-center mb-5">All The Courses</h2>
+      <h2 className="text-center mb-5">Manage The Orders</h2>
 
       <table className="table">
         <thead>
@@ -56,7 +57,10 @@ const ManageOrders = () => {
             <th scope="col">Buyer</th>
             <th scope="col">Email</th>
             <th scope="col">Price</th>
-            <th scope="col">Handle</th>
+            <th scope="col">Status</th>
+            <th scope="col">Update Status</th>
+            
+            <th scope="col">Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -66,7 +70,16 @@ const ManageOrders = () => {
               <td>{order?.displayName}</td>
               <td>{order?.email}</td>
               <td>$ {order?.price}</td>
-              <td className='d-flex'>
+              <td>{order?.status}</td>
+              <td>
+              <button
+                        onClick={() => handleStatus(order._id)}
+                        className="btn btn-outline-success"
+                      >
+                        Give Approval
+                      </button>
+              </td>
+              <td>
                 <button
                   onClick={() => handleDelete(order?._id)}
                   className="btn btn-danger float-end"

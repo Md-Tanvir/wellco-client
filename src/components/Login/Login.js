@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory, useLocation } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import './Login.css'
+import "./Login.css";
 
 const Login = () => {
   const [loginData, setLoginData] = useState({});
@@ -54,9 +54,9 @@ const Login = () => {
             <div className="mx-auto" style={{ maxWidth: "350px" }}>
               {isLoading && (
                 <div className="d-flex justify-content-center">
-                    <div className="spinner-grow" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </div>
+                  <div className="spinner-grow" role="status">
+                    <span className="visually-hidden">Loading...</span>
+                  </div>
                 </div>
               )}
               {user?.email && <p>Login successfully!</p>}

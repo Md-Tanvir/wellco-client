@@ -24,7 +24,7 @@ const Booking = () => {
 
   const onSubmit = (data) => {
     data.email = user.email;
-    data.status = "pending";
+    data.status = "Pending";
     data.name = course.title;
     data.price = course.price;
     data.img = course.img;
@@ -42,7 +42,7 @@ const Booking = () => {
           reset();
         }
       });
-    console.log(data);
+
   };
 
   return (
