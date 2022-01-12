@@ -44,9 +44,9 @@ function App() {
             <Route path="/blog/:blogId">
              <Blog></Blog>
             </Route>
-            <Route path="/dashboard">
+            <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
-            </Route>
+            </PrivateRoute>
             <Route path="/login">
               <Login></Login>
             </Route>
