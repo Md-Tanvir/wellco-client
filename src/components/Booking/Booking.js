@@ -26,7 +26,7 @@ const Booking = () => {
     data.email = user.email;
     data.status = "pending";
     data.name = course.title;
-    data.newPrice = course.newPrice;
+    data.price = course.price;
     data.img = course.img;
 
     // Sending Order data to Database
