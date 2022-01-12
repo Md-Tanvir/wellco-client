@@ -7,7 +7,7 @@ const Blog = () => {
 
   // FOR GETTING SPECIFIC BLOG
   useEffect(() => {
-    const url = `http://localhost:5000/blogs`;
+    const url = `https://still-bastion-84671.herokuapp.com/blogs`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -20,9 +20,11 @@ const Blog = () => {
     <div className='course-area'>
       <div className="container py-5">
         <div className="row">
+          {/* BLog img */}
           <div className="col-12 col-lg-6">
             <img data-aos="fade-left" src={blog?.img} style={{maxHeight:'400px',objectFit:'cover'}} className="w-100 mt-5" alt="" />
           </div>
+          {/* Blog text */}
           <div className="col-12 col-lg-6">
            <div className='course-card p-4 p-lg-5'>
            <h2 data-aos="fade-right" >{blog?.title}</h2>

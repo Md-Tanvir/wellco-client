@@ -3,6 +3,7 @@ import img1 from "../../../image/1.png";
 import img2 from "../../../image/2.png";
 import img3 from "../../../image/3.png";
 import "./CountUpArea.css";
+
 const CountUpArea = () => {
   return (
     <div className="container py-5">

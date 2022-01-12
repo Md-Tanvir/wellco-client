@@ -12,9 +12,9 @@ const Review = () => {
     formState: { errors },
   } = useForm();
 
-  // for adding review
+  // For adding review
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://still-bastion-84671.herokuapp.com/reviews", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -31,8 +31,8 @@ const Review = () => {
 
   return (
     <div>
-      <h2 className="text-center">Give Your Valuable Feedback</h2>
-      <div className="pb-5 pt-3">
+      <h2 data-aos="fade-up" className="text-center">Give Your Valuable Feedback</h2>
+      <div data-aos="fade-up" className="pb-5 pt-3">
         {/* form for adding new review */}
         <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
           <input

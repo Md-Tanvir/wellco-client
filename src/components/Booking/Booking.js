@@ -10,7 +10,7 @@ const Booking = () => {
 
   // FOR GETTING SPECIFIC COURSE
   useEffect(() => {
-    const url = `http://localhost:5000/courses`;
+    const url = `https://still-bastion-84671.herokuapp.com/courses`;
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
@@ -30,7 +30,7 @@ const Booking = () => {
     data.img = course.img;
 
     // Sending Order data to Database
-    fetch("http://localhost:5000/confirmOrder", {
+    fetch("https://still-bastion-84671.herokuapp.com/confirmOrder", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),
@@ -42,7 +42,6 @@ const Booking = () => {
           reset();
         }
       });
-
   };
 
   return (
@@ -56,6 +55,7 @@ const Booking = () => {
         </div>
       ) : (
         <div className="container">
+          {/* Course details */}
           <div className="row gy-5">
             <div className="col-12 col-lg-6">
               <div key={course?._id} className="col">
@@ -78,7 +78,9 @@ const Booking = () => {
                         <h5 className="mb-0">{course?.instructorName}</h5>
                       </div>
                       <div className="col-lg-6 col-12">
-                        <h5 className="booking-price text-center">Price: ${course?.price}</h5>
+                        <h5 className="booking-price text-center">
+                          Price: ${course?.price}
+                        </h5>
                         <p className="text-center mb-0 booking-price">
                           <i className="fas fa-book me-2 "></i>
                           {course?.lessons} Lessons
@@ -91,9 +93,17 @@ const Booking = () => {
                 </div>
               </div>
             </div>
+
+            {/* Booking form */}
             <div className="col-lg-6 col-12">
-              <h2 data-aos="fade-up" className="text-center mb-3">Confirm Your Order</h2>
-              <form data-aos="fade-up" className="login-form" onSubmit={handleSubmit(onSubmit)}>
+              <h2 data-aos="fade-up" className="text-center mb-3">
+                Confirm Your Order
+              </h2>
+              <form
+                data-aos="fade-up"
+                className="login-form"
+                onSubmit={handleSubmit(onSubmit)}
+              >
                 <input
                   type="text"
                   defaultValue={user.displayName}

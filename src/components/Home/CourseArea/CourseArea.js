@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchCourses } from "../../../Redux/slices/courseSlice";
 
 const CourseArea = () => {
+   // used redux to fetch data
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCourses());

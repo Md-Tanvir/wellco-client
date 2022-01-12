@@ -52,6 +52,7 @@ const Dashboard = () => {
               </div>
               <div className="offcanvas-body">
                 <div className="dash-nav">
+                  {/* Used conditional rendering */}
                   {admin && (
                     <>
                     <NavLink to={`${url}/publishBlog`}>
@@ -101,6 +102,7 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="dashboard-area">
+            {/* different components of dashboard */}
             <Switch>
               <Route exact path={path}>
                 <DashboardHome></DashboardHome>

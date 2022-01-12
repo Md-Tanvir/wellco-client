@@ -6,10 +6,10 @@ const MakeAdmin = () => {
   const handleOnBlur = (e) => {
     setEmail(e.target.value);
   };
-  //  getting admin role
+  //  For getting admin role
   const handleAdmin = (e) => {
     const user = { email };
-    fetch("http://localhost:5000/users/admin", {
+    fetch("https://still-bastion-84671.herokuapp.com/users/admin", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -30,13 +30,13 @@ const MakeAdmin = () => {
   return (
     <div>
       <h2 data-aos="fade-up" className="text-center mb-5">Add New Admin</h2>
-      {/* form to create admin */}
+      {/* Form to create admin */}
       <form data-aos="fade-up"
         className="justify-content-center mx-auto text-center"
         onSubmit={handleAdmin}
       >
         <input
-          style={{ width: "70%" }}
+          style={{ width: "65%" }}
           onBlur={handleOnBlur}
           type="email"
           label="email"

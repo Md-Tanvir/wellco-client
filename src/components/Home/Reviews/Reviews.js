@@ -6,6 +6,7 @@ import "./Reviews.css";
 import { useDispatch, useSelector } from "react-redux";
 
 const Reviews = () => {
+   // used redux to fetch data
   const dispatch = useDispatch();
 
   useEffect(() => {

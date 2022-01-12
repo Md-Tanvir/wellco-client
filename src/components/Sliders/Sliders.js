@@ -8,11 +8,10 @@ import s4 from "../../image/brand-4.png";
 import s5 from "../../image/brand-5.png";
 import s6 from "../../image/brand-6.png";
 import Slider from "react-slick";
-import './Sliders.css'
+import "./Sliders.css";
 
 const Sliders = () => {
   const settings = {
-    
     infinite: true,
     slidesToShow: 5,
     slidesToScroll: 1,
@@ -48,10 +47,12 @@ const Sliders = () => {
     ],
   };
   return (
-    <div className='py-5 container' data-aos="fade-up">
-        <h5 className='text-center'>PARTNERS</h5>
-        <h2 className="text-center mb-5 main-title">Trusted By 100 World's Best Companies</h2>
-      <Slider {...settings} >
+    <div className="py-5 container" data-aos="fade-up">
+      <h5 className="text-center">PARTNERS</h5>
+      <h2 className="text-center mb-5 main-title">
+        Trusted By 100 World's Best Companies
+      </h2>
+      <Slider {...settings}>
         <div className="d-flex justify-content-center">
           <img src={s1} alt="" />
         </div>

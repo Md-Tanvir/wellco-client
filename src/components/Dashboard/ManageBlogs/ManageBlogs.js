@@ -5,7 +5,7 @@ const ManageBlogs = () => {
 
   // Getting all blogs
   useEffect(() => {
-    fetch("http://localhost:5000/blogs")
+    fetch("https://still-bastion-84671.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageBlogs = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the blog?");
     if (action) {
-      fetch(`http://localhost:5000/deleteBlog/${id}`, {
+      fetch(`https://still-bastion-84671.herokuapp.com/deleteBlog/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

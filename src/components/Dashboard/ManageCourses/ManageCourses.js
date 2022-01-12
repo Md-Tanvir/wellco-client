@@ -5,7 +5,7 @@ const ManageCourses = () => {
 
   // Getting all Courses
   useEffect(() => {
-    fetch("http://localhost:5000/courses")
+    fetch("https://still-bastion-84671.herokuapp.com/courses")
       .then((res) => res.json())
       .then((data) => setCourses(data));
   }, []);
@@ -14,7 +14,7 @@ const ManageCourses = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the course?");
     if (action) {
-      fetch(`http://localhost:5000/deleteCourse/${id}`, {
+      fetch(`https://still-bastion-84671.herokuapp.com/deleteCourse/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -30,7 +30,9 @@ const ManageCourses = () => {
 
   return (
     <div>
-      <h2 data-aos="fade-up" className="text-center mb-5">All The Courses</h2>
+      <h2 data-aos="fade-up" className="text-center mb-5">
+        All The Courses
+      </h2>
 
       <table data-aos="fade-up" className="table">
         <thead>
@@ -64,5 +66,3 @@ const ManageCourses = () => {
 };
 
 export default ManageCourses;
-
-

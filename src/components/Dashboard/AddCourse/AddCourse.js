@@ -10,9 +10,9 @@ const AddCourse = () => {
     formState: { errors },
   } = useForm();
 
-  // for adding new Course
+  // For adding new Course
   const onSubmit = (data) => {
-    fetch("http://localhost:5000/addCourse", {
+    fetch("https://still-bastion-84671.herokuapp.com/addCourse", {
       method: "POST",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(data),

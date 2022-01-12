@@ -1,35 +1,37 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const ManageReviews = () => {
-    const [reviews, setBlogs] = useState([]);
+  const [reviews, setBlogs] = useState([]);
 
-    // Getting all reviews
-    useEffect(() => {
-      fetch("http://localhost:5000/reviews")
+  // Getting all reviews
+  useEffect(() => {
+    fetch("https://still-bastion-84671.herokuapp.com/reviews")
+      .then((res) => res.json())
+      .then((data) => setBlogs(data));
+  }, []);
+
+  // Deleting reviews with id
+  const handleDelete = (id) => {
+    const action = window.confirm("Do you want to delete the review?");
+    if (action) {
+      fetch(`https://still-bastion-84671.herokuapp.com/deleteReview/${id}`, {
+        method: "DELETE",
+      })
         .then((res) => res.json())
-        .then((data) => setBlogs(data));
-    }, []);
-  
-    // Deleting reviews with id
-    const handleDelete = (id) => {
-      const action = window.confirm("Do you want to delete the review?");
-      if (action) {
-        fetch(`http://localhost:5000/deleteReview/${id}`, {
-          method: "DELETE",
-        })
-          .then((res) => res.json())
-          .then((data) => {
-            if (data.deletedCount) {
-              alert("Deleted successfully");
-              const remaining = reviews.filter((review) => review._id !== id);
-              setBlogs(remaining);
-            }
-          });
-      }
-    };
-    return (
-        <div>
-      <h2 data-aos="fade-up" className="text-center mb-5">Manage Reviews</h2>
+        .then((data) => {
+          if (data.deletedCount) {
+            alert("Deleted successfully");
+            const remaining = reviews.filter((review) => review._id !== id);
+            setBlogs(remaining);
+          }
+        });
+    }
+  };
+  return (
+    <div>
+      <h2 data-aos="fade-up" className="text-center mb-5">
+        Manage Reviews
+      </h2>
 
       <table data-aos="fade-up" className="table">
         <thead>
@@ -46,7 +48,7 @@ const ManageReviews = () => {
             <tr key={review?._id}>
               <th>{review?.name}</th>
               <td>{review?.rating}</td>
-              <td>{review?.text.slice(0,60)}...</td>
+              <td>{review?.text.slice(0, 60)}...</td>
 
               <td>
                 <button
@@ -61,7 +63,7 @@ const ManageReviews = () => {
         </tbody>
       </table>
     </div>
-    );
+  );
 };
 
 export default ManageReviews;

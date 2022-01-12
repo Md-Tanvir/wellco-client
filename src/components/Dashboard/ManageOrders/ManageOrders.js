@@ -6,7 +6,7 @@ const ManageOrders = () => {
 
   // Getting all orders
   useEffect(() => {
-    fetch("http://localhost:5000/allOrders")
+    fetch("https://still-bastion-84671.herokuapp.com/allOrders")
       .then((res) => res.json())
       .then((data) => setAllOrders(data));
   }, [isApproved]);
@@ -16,7 +16,7 @@ const ManageOrders = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to cancel the order?");
     if (action) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://still-bastion-84671.herokuapp.com/deleteOrder/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -25,13 +25,13 @@ const ManageOrders = () => {
             alert("Canceled successfully");
             const remaining = allOrders.filter((order) => order._id !== id);
             setAllOrders(remaining);
-          }  
+          }
         });
     }
   };
   // Updating order status
   const handleStatus = (id) => {
-    fetch(`http://localhost:5000/allOrders/${id}`, {
+    fetch(`https://still-bastion-84671.herokuapp.com/allOrders/${id}`, {
       method: "PUT",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(allOrders),
@@ -48,7 +48,9 @@ const ManageOrders = () => {
 
   return (
     <div>
-      <h2 data-aos="fade-up" className="text-center mb-5">Manage The Orders</h2>
+      <h2 data-aos="fade-up" className="text-center mb-5">
+        Manage The Orders
+      </h2>
 
       <table data-aos="fade-up" className="table">
         <thead>
@@ -59,7 +61,7 @@ const ManageOrders = () => {
             <th scope="col">Price</th>
             <th scope="col">Status</th>
             <th scope="col">Update Status</th>
-            
+
             <th scope="col">Delete</th>
           </tr>
         </thead>
@@ -72,12 +74,12 @@ const ManageOrders = () => {
               <td>$ {order?.price}</td>
               <td>{order?.status}</td>
               <td>
-              <button
-                        onClick={() => handleStatus(order._id)}
-                        className="btn btn-outline-success"
-                      >
-                        Give Approval
-                      </button>
+                <button
+                  onClick={() => handleStatus(order._id)}
+                  className="btn btn-outline-success"
+                >
+                  Give Approval
+                </button>
               </td>
               <td>
                 <button

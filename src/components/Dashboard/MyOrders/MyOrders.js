@@ -8,7 +8,7 @@ const MyOrders = () => {
 
   // Get orders of logged user
   useEffect(() => {
-    fetch(`http://localhost:5000/myOrders/${email}`)
+    fetch(`https://still-bastion-84671.herokuapp.com/myOrders/${email}`)
       .then((res) => res.json())
       .then((data) => setOrders(data));
   }, []);
@@ -17,7 +17,7 @@ const MyOrders = () => {
   const handleCancel = (id) => {
     const action = window.confirm("Do you want to cancel the Order?");
     if (action) {
-      fetch(`http://localhost:5000/deleteOrder/${id}`, {
+      fetch(`https://still-bastion-84671.herokuapp.com/deleteOrder/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
