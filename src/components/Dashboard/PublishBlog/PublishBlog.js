@@ -29,8 +29,8 @@ const onSubmit = (data) => {
 
     return (
         <div className='pb-5 pt-3'>
-            <h2 className="text-center mb-5">Publish New Blog</h2>
-             <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+            <h2 data-aos="fade-up" className="text-center mb-5">Publish New Blog</h2>
+             <form data-aos="fade-up" className="login-form" onSubmit={handleSubmit(onSubmit)}>
           <input
             {...register("userName")}
             placeholder="Name"

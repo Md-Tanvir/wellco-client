@@ -29,9 +29,9 @@ const ManageReviews = () => {
     };
     return (
         <div>
-      <h2 className="text-center mb-5">All The Reviews</h2>
+      <h2 data-aos="fade-up" className="text-center mb-5">Manage Reviews</h2>
 
-      <table className="table">
+      <table data-aos="fade-up" className="table">
         <thead>
           <tr>
             <th scope="col">Name</th>

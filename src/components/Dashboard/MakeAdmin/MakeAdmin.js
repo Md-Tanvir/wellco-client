@@ -29,9 +29,9 @@ const MakeAdmin = () => {
   };
   return (
     <div>
-      <h2 className="text-center mb-5">Add New Admin</h2>
+      <h2 data-aos="fade-up" className="text-center mb-5">Add New Admin</h2>
       {/* form to create admin */}
-      <form
+      <form data-aos="fade-up"
         className="justify-content-center mx-auto text-center"
         onSubmit={handleAdmin}
       >

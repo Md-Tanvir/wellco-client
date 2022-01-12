@@ -92,8 +92,8 @@ const Booking = () => {
               </div>
             </div>
             <div className="col-lg-6 col-12">
-              <h2 className="text-center mb-3">Confirm Your Order</h2>
-              <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
+              <h2 data-aos="fade-up" className="text-center mb-3">Confirm Your Order</h2>
+              <form data-aos="fade-up" className="login-form" onSubmit={handleSubmit(onSubmit)}>
                 <input
                   type="text"
                   defaultValue={user.displayName}

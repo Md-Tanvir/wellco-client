@@ -17,21 +17,21 @@ const Blog = () => {
       });
   }, [blogId]);
   return (
-    <div>
+    <div className='course-area'>
       <div className="container py-5">
         <div className="row">
-          <div className="col-12 col-md-6">
-            <img src={blog?.img} className="w-100" alt="" />
+          <div className="col-12 col-lg-6">
+            <img data-aos="fade-left" src={blog?.img} style={{maxHeight:'400px',objectFit:'cover'}} className="w-100 mt-5" alt="" />
           </div>
-          <div className="col-12 col-md-6">
-           <div className='course-card px-5 pb-5'>
-           <h2>{blog?.title}</h2>
+          <div className="col-12 col-lg-6">
+           <div className='course-card p-4 p-lg-5'>
+           <h2 data-aos="fade-right" >{blog?.title}</h2>
             <div className="my-4">
-              <span className="blog-tag me-3">{blog?.tag1}</span>
-              <span className="blog-tag">{blog?.tag2}</span>
+              <span data-aos="fade-up" className="blog-tag me-3">{blog?.tag1}</span>
+              <span data-aos="fade-up" className="blog-tag">{blog?.tag2}</span>
             </div>
-            <h5 className='main-title'><i className="fas fa-user"></i> {blog?.userName}</h5>
-            <p>{blog?.text}</p>
+            <h5 data-aos="fade-up" className='main-title'><i className="fas fa-user"></i> {blog?.userName}</h5>
+            <p data-aos="fade-up">{blog?.text}</p>
           </div>
            </div>
         </div>

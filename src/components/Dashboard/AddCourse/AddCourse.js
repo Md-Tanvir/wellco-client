@@ -28,8 +28,8 @@ const AddCourse = () => {
 
   return (
     <div>
-      <h2 className="text-center">Add New Course</h2>
-      <div className="pb-5 pt-3">
+      <h2 data-aos="fade-up" className="text-center">Add New Course</h2>
+      <div data-aos="fade-up" className="pb-5 pt-3">
         {/* form for adding new Course */}
         <form className="login-form" onSubmit={handleSubmit(onSubmit)}>
           <input

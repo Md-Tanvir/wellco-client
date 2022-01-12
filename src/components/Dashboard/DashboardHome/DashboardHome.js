@@ -6,7 +6,7 @@ const DashboardHome = () => {
     return (
         <div>
              {/* welcome msg */}
-          <h2 className='text-center py-5'>Welcome to Dashboard <span className='text-wlc'> {user.displayName}</span></h2>
+          <h2 data-aos="fade-up" className='text-center py-5'>Welcome to Dashboard <span className='text-wlc'> {user.displayName}</span></h2>
         </div>
     );
 };
