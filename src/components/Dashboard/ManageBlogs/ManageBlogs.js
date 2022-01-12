@@ -14,7 +14,7 @@ const ManageBlogs = () => {
   const handleDelete = (id) => {
     const action = window.confirm("Do you want to delete the blog?");
     if (action) {
-      fetch(`http://localhost:5000/deleteCourse/${id}`, {
+      fetch(`http://localhost:5000/deleteBlog/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
